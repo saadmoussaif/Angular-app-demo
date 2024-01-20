@@ -1,0 +1,15 @@
+.loading-window-products {
+  position: absolute;
+  background:  #fefefe; /* #c30e2e; */
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+
+.loading-window-products img{
+  position: absolute;
+  top: 20%;
+  left: 38%;
+}

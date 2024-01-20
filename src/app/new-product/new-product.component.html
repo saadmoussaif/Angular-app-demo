@@ -1,0 +1,32 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-header">
+      new Product
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Create a New Product</h5>
+
+      <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Product Name</label>
+          <input type="text" class="form-control" id="name" formControlName="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="price" formControlName="price">
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="checked" formControlName="checked">
+          <label class="form-check-label" for="checked">Checked</label>
+        </div>
+
+        <button [disabled]="productForm.invalid"  type="submit" class="btn btn-primary">Submit
+        </button>
+        <p *ngIf="productForm.invalid" style="color: red">Please provide correct data !!</p>
+      </form>
+
+    </div>
+  </div>
+</div>
